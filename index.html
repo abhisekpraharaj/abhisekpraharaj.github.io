@@ -3,92 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Website</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 1.5em;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 2em 0;
-        }
-        .project {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 1.5em;
-            padding: 1.5em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-        h1, h2 {
-            margin: 0;
-            padding: 0;
-            font-weight: 600;
-        }
-        h1 {
-            margin-bottom: 0.5em;
-        }
-        h2 {
-            margin-bottom: 0.5em;
-            color: #007bff;
-        }
-        p {
-            margin: 0.5em 0;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: 500;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Projects</h1>
+        <div class="header-content">
+            <img src="your-image.jpg" alt="Your Image" class="profile-image">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <section class="project">
-            <h2>Project Title 1</h2>
-            <p>A brief description of project 1. This could include what technologies were used, the goals of the project, and any notable achievements.</p>
-            <a href="https://github.com/username/project1" target="_blank">View Project</a>
+    <main>
+        <section class="content">
+            <h1>Welcome to My Website</h1>
+            <p>This is a paragraph about me. You can include details such as your background, interests, and anything else you'd like visitors to know.</p>
         </section>
-        <section class="project">
-            <h2>Project Title 2</h2>
-            <p>A brief description of project 2. Include key features, technologies used, and any outcomes or findings from the project.</p>
-            <a href="https://github.com/username/project2" target="_blank">View Project</a>
-        </section>
-        <!-- Add more projects as needed -->
-    </div>
+    </main>
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
