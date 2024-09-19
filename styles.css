@@ -1,63 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('background-blurred-image.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.upper-half {
-    height: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.lower-half {
-    height: 70%;
-    padding: 2em;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-h1 {
-    color: #333;
-}
-
-.project-image, .gallery-image {
-    max-width: 100%;
-    height: auto;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gallery-image {
-    margin-right: 10px;
-    margin-bottom: 10px;
+body {  
+  background-image: url('background blurred image.png');  
+  background-size: cover;  
+  background-position: center;  
+  height: 100vh;  
+  margin: 0;  
+}  
+  
+.container {  
+  width: 80%;  
+  margin: 40px auto;  
+  background-color: #f2f2f2;  
+  padding: 20px;  
+  border: 1px solid #ddd;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.project {  
+  margin: 20px;  
+  padding: 20px;  
+  border: 1px solid #ddd;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.project-image {  
+  width: 200px;  
+  height: 200px;  
+  margin: 20px;  
+  border-radius: 10px;  
+}  
+  
+.project-description {  
+  font-size: 18px;  
+  margin: 20px;  
+}  
+  
+.project-link {  
+  text-decoration: none;  
+  color: #337ab7;  
+  margin: 10px;  
+}  
+  
+.project-link:hover {  
+  color: #23527c;  
+}  
+  
+.gallery {  
+  margin: 20px;  
+  padding: 20px;  
+  border: 1px solid #ddd;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.gallery-image {  
+  width: 200px;  
+  height: 200px;  
+  margin: 20px;  
+  border-radius: 10px;  
+}  
+  
+.gallery-description {  
+  font-size: 18px;  
+  margin: 20px;  
 }
