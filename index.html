@@ -1,73 +1,91 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-	<title>Your Website</title>  
-	<style>  
-		body {  
-			background-image: url('profile.png');  
-			background-size: cover;  
-			background-position: center;  
-			height: 100vh;  
-			margin: 0;  
-		}  
-		  
-		.upper-half {  
-			height: 30vh;  
-			background-color: #f2f2f2;  
-			padding: 20px;  
-			text-align: center;  
-		}  
-		  
-		.lower-half {  
-			height: 70vh;  
-			background-color: #f2f2f2;  
-			padding: 20px;  
-			text-align: center;  
-		}  
-		  
-		.profile-picture {  
-   			width: 200px;  
-  			height: 200px;  
-   			border-radius: 0%;  
-   			margin: 20px;  
-		}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars */
+        }
 
-		  
-		.navigation {  
-			float: right;  
-			margin: 20px;  
-		}  
-		  
-		.navigation a {  
-			text-decoration: none;  
-			color: #337ab7;  
-			margin: 10px;  
-		}  
-		  
-		.navigation a:hover {  
-			color: #23527c;  
-		}  
-		  
-		.about-me {  
-			font-size: 18px;  
-			margin: 20px;  
-		}  
-	</style>  
-</head>  
-<body>  
-	<div class="upper-half">  
-		<img src="profile.png" alt="Profile Picture" class="profile-picture">  
-		<div class="navigation">  
-			<a href="index.html">Home</a>  
-			<a href="cv.html">CV</a>  
-			<a href="projects.html">Projects</a>  
-			<a href="gallery.html">Gallery</a>  
-			<a href="contact.html">Contact</a>  
-		</div>  
-	</div>  
-	<div class="lower-half">  
-		<h1>Welcome to my website!</h1>  
-		<p class="about-me">I am Abhisek Praharaj a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems..</p>  
-	</div>  
-</body>  
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg_image.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Adjust blur level as needed */
+            z-index: -1; /* Places background behind content */
+        }
+
+        .content {
+            position: relative;
+            height: 100vh;
+            background-color: rgba(242, 242, 242, 0.8); /* Light grey with transparency */
+        }
+
+        .upper-half {
+            height: 30vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .lower-half {
+            height: 70vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 0%;
+            margin: 20px;
+        }
+
+        .navigation {
+            float: right;
+            margin: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #337ab7;
+            margin: 10px;
+        }
+
+        .navigation a:hover {
+            color: #23527c;
+        }
+
+        .about-me {
+            font-size: 18px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <div class="upper-half">
+            <img src="profile.png" alt="Profile Picture" class="profile-picture">
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="projects.html">Projects</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="lower-half">
+            <h1>Welcome to my website!</h1>
+            <p class="about-me">I am Abhisek Praharaj a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems.</p>
+        </div>
+    </div>
+</body>
 </html>
