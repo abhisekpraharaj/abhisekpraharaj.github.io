@@ -33,25 +33,26 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .row {
+        .project {
             display: flex;
-            justify-content: space-between;
-        }
-
-        .column {
-            flex: 1;
-            margin: 10px;
-        }
-
-        .column img {
-            width: 100%;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
             border-radius: 10px;
+            padding: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .project-description {
+            flex: 1;
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        .project-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
         }
 
         .project-link {
@@ -72,26 +73,26 @@
     <div class="background"></div>
     <div class="content">
         <h1>Projects</h1>
-        <div class="row">
-            <div class="column">
-                <div class="project-description">
-                    <p>This is a brief description of project 1. You can click on the link below to learn more.</p>
-                    <a href="https://github.com/your-repo/project1" class="project-link">Learn More</a>
-                </div>
-                <div class="project-description">
-                    <p>This is a brief description of project 2. You can click on the link below to learn more.</p>
-                    <a href="https://github.com/your-repo/project2" class="project-link">Learn More</a>
-                </div>
-                <div class="project-description">
-                    <p>This is a brief description of project 3. You can click on the link below to learn more.</p>
-                    <a href="https://github.com/your-repo/project3" class="project-link">Learn More</a>
-                </div>
+        <div class="project">
+            <div class="project-description">
+                <p>This is a brief description of project 1. You can click on the link below to learn more.</p>
+                <a href="https://github.com/your-repo/project1" class="project-link">Learn More</a>
             </div>
-            <div class="column">
-                <img src="project1.png" alt="Project 1">
-                <img src="project2.png" alt="Project 2">
-                <img src="project3.png" alt="Project 3">
+            <img src="project1.png" alt="Project 1" class="project-image">
+        </div>
+        <div class="project">
+            <div class="project-description">
+                <p>This is a brief description of project 2. You can click on the link below to learn more.</p>
+                <a href="https://github.com/your-repo/project2" class="project-link">Learn More</a>
             </div>
+            <img src="project2.png" alt="Project 2" class="project-image">
+        </div>
+        <div class="project">
+            <div class="project-description">
+                <p>This is a brief description of project 3. You can click on the link below to learn more.</p>
+                <a href="https://github.com/your-repo/project3" class="project-link">Learn More</a>
+            </div>
+            <img src="project3.png" alt="Project 3" class="project-image">
         </div>
     </div>
 </body>
