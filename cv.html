@@ -1,41 +1,72 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-	<title>CV</title>  
-	<style>  
-		body {  
-			background-image: url('background blurred image.png');  
-			background-size: cover;  
-			background-position: center;  
-			height: 100vh;  
-			margin: 0;  
-		}  
-		  
-		.container {  
-			width: 80%;  
-			margin: 40px auto;  
-			background-color: #f2f2f2;  
-			padding: 20px;  
-			border: 1px solid #ddd;  
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-		}  
-		  
-		.pointy {  
-			width: 100px;  
-			height: 100px;  
-			margin: 20px;  
-		}  
-		  
-		.cv {  
-			margin: 20px;  
-		}  
-	</style>  
-</head>  
-<body>  
-	<div class="container">  
-		<img src="pointy.png" alt="Pointy" class="pointy">  
-		<h1>CV</h1>  
-		<p class="cv">This is my CV. You can click on the navigation links above to explore my website.</p>  
-	</div>  
-</body>  
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            position: relative;
+            width: 80%;
+            height: 90vh;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+
+        .cv-content {
+            margin-left: 200px; /* Adjust this margin to accommodate the profile image */
+            padding: 20px;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .cv-content h1 {
+            margin-top: 0;
+            color: #337ab7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Picture -->
+        <img src="your-image.png" alt="My Image" class="profile-picture">
+
+        <!-- CV Content -->
+        <div class="cv-content">
+            <h1>Curriculum Vitae</h1>
+            <h2>Personal Details</h2>
+            <p>Details about yourself...</p>
+            <h2>Education</h2>
+            <p>Your educational background...</p>
+            <h2>Experience</h2>
+            <p>Details about your work experience...</p>
+            <!-- Add more sections as needed -->
+        </div>
+    </div>
+
+</body>
 </html>
