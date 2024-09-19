@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  filter: blur(8px);
+  filter: none;
   margin: 0;
 }
 
