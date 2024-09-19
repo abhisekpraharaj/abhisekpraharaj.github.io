@@ -50,25 +50,31 @@
             color: #23527c;
         }
 
-        .gallery {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+        h1 {
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust size as needed */
+            gap: 20px; /* Space between images */
+        }
+
+        .gallery-item {
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 10px;
+            overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .gallery-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
+            width: 100%;
+            height: auto;
         }
 
         .gallery-description {
-            font-size: 18px;
-            margin-left: 20px; /* Space between image and description */
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -83,17 +89,39 @@
             <a href="contact.html">Contact</a>
         </div>
         <h1>Gallery</h1>
-        <div class="gallery">
-            <img src="image1.png" alt="Image 1" class="gallery-image">
-            <p class="gallery-description">This is a brief description of image 1.</p>
-        </div>
-        <div class="gallery">
-            <img src="image2.png" alt="Image 2" class="gallery-image">
-            <p class="gallery-description">This is a brief description of image 2.</p>
-        </div>
-        <div class="gallery">
-            <img src="image3.png" alt="Image 3" class="gallery-image">
-            <p class="gallery-description">This is a brief description of image 3.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="a.png" alt="Image A" class="gallery-image">
+                <p class="gallery-description">Description for image A.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="b.png" alt="Image B" class="gallery-image">
+                <p class="gallery-description">Description for image B.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="c.png" alt="Image C" class="gallery-image">
+                <p class="gallery-description">Description for image C.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="d.png" alt="Image D" class="gallery-image">
+                <p class="gallery-description">Description for image D.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="e.png" alt="Image E" class="gallery-image">
+                <p class="gallery-description">Description for image E.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="f.png" alt="Image F" class="gallery-image">
+                <p class="gallery-description">Description for image F.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="g.png" alt="Image G" class="gallery-image">
+                <p class="gallery-description">Description for image G.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="h.png" alt="Image H" class="gallery-image">
+                <p class="gallery-description">Description for image H.</p>
+            </div>
         </div>
     </div>
 </body>
