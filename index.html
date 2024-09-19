@@ -32,7 +32,9 @@
         .upper-half {
             height: 30vh;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .lower-half {
@@ -42,21 +44,22 @@
         }
 
         .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 0%;
+            width: 250px; /* Bigger profile picture */
+            height: 250px;
+            border-radius: 50%; /* Circular profile picture */
             margin: 20px;
+            float: left;
         }
 
         .navigation {
-            float: right;
-            margin: 20px;
+            margin-right: 20px;
+            text-align: right;
         }
 
         .navigation a {
             text-decoration: none;
             color: #337ab7;
-            margin: 10px;
+            margin: 0 10px;
         }
 
         .navigation a:hover {
@@ -84,7 +87,7 @@
         </div>
         <div class="lower-half">
             <h1>Welcome to my website!</h1>
-            <p class="about-me">I am Abhisek Praharaj a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems.</p>
+            <p class="about-me">I am Abhisek Praharaj, a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems.</p>
         </div>
     </div>
 </body>
