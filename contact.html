@@ -1,27 +1,99 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-	<title>Contact</title>  
-	<style>  
-		body {  
-			background-image: url('background blurred image.png');  
-			background-size: cover;  
-			background-position: center;  
-			height: 100vh;  
-			margin: 0;  
-		}  
-		  
-		.container {  
-			width: 80%;  
-			margin: 40px auto;  
-			background-color: #f2f2f2;  
-			padding: 20px;  
-			border: 1px solid #ddd;  
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-		}  
-		  
-		.contact {  
-			margin: 20px;  
-			padding: 20px;  
-			border: 1px solid #ddd;  
-			border-radius: 10px
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background blurred image.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Adjust blur level as needed */
+            z-index: -1; /* Places background behind content */
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: rgba(242, 242, 242, 0.9); /* Light grey with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff; /* White background for contact details */
+        }
+
+        .contact h2 {
+            margin-top: 0;
+        }
+
+        .contact-item {
+            margin: 10px 0;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        .contact-item a:hover {
+            color: #23527c;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px; /* Space between icons */
+        }
+
+        .icons img {
+            width: 30px; /* Size of the icons */
+            height: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-item">
+                <strong>Name:</strong> Abhisek Praharaj
+            </div>
+            <div class="contact-item">
+                <strong>Gmail Address:</strong> <a href="mailto:your-email@gmail.com">your-email@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+            <div class="contact-item">
+                <strong>GitHub:</strong> <a href="https://github.com/your-username" target="_blank">
+                    <img src="github-icon.png" alt="GitHub Icon">
+                </a>
+            </div>
+            <div class="contact-item">
+                <strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/your-profile" target="_blank">ResearchGate Profile</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
