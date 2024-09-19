@@ -1,31 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="upper-section">
-        <div class="profile-image">
-            <img src="profile.png" alt="Profile Picture">
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="images.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="lower-section">
-        <div class="content">
-            <h1>Welcome to My Website</h1>
-            <p>Hello, I’m [Your Name]. I’m passionate about [your profession/interests]. Welcome to my personal site!</p>
-        </div>
-    </div>
-</body>
+<!DOCTYPE html>  
+<html>  
+<head>  
+	<title>Your Website</title>  
+	<style>  
+		body {  
+			background-image: url('background blurred image.png');  
+			background-size: cover;  
+			background-position: center;  
+			height: 100vh;  
+			margin: 0;  
+		}  
+		  
+		.upper-half {  
+			height: 30vh;  
+			background-color: #f2f2f2;  
+			padding: 20px;  
+			text-align: center;  
+		}  
+		  
+		.lower-half {  
+			height: 70vh;  
+			background-color: #f2f2f2;  
+			padding: 20px;  
+			text-align: center;  
+		}  
+		  
+		.profile-picture {  
+			width: 100px;  
+			height: 100px;  
+			border-radius: 50%;  
+			margin: 20px;  
+		}  
+		  
+		.navigation {  
+			float: right;  
+			margin: 20px;  
+		}  
+		  
+		.navigation a {  
+			text-decoration: none;  
+			color: #337ab7;  
+			margin: 10px;  
+		}  
+		  
+		.navigation a:hover {  
+			color: #23527c;  
+		}  
+		  
+		.about-me {  
+			font-size: 18px;  
+			margin: 20px;  
+		}  
+	</style>  
+</head>  
+<body>  
+	<div class="upper-half">  
+		<img src="profile picture.png" alt="Profile Picture" class="profile-picture">  
+		<div class="navigation">  
+			<a href="home.html">Home</a>  
+			<a href="cv.html">CV</a>  
+			<a href="projects.html">Projects</a>  
+			<a href="gallery.html">Gallery</a>  
+			<a href="contact.html">Contact</a>  
+		</div>  
+	</div>  
+	<div class="lower-half">  
+		<h1>Welcome to my website!</h1>  
+		<p class="about-me">This is a brief introduction about myself. You can click on the navigation links above to explore my website.</p>  
+	</div>  
+</body>  
 </html>
