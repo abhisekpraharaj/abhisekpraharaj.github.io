@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <style>
         body {
@@ -30,6 +32,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Needed for positioning navigation link */
         }
 
         .contact {
@@ -42,6 +45,7 @@
 
         .contact h2 {
             margin-top: 0;
+            display: inline-block; /* Align with navigation link */
         }
 
         .contact-item {
@@ -71,11 +75,31 @@
             width: 30px; /* Size of the icons */
             height: 30px;
         }
+
+        .navigation {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        .navigation a:hover {
+            color: #23527c;
+        }
     </style>
 </head>
 <body>
     <div class="background"></div>
     <div class="container">
+        <div class="navigation">
+            <a href="index.html">Home</a>
+        </div>
         <div class="contact">
             <h2>Contact Information</h2>
             <div class="contact-item">
