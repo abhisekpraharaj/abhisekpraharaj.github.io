@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <style>
         body {
@@ -32,6 +34,22 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .navigation {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #337ab7;
+            margin: 0 10px;
+        }
+
+        .navigation a:hover {
+            color: #23527c;
+        }
+
         .gallery {
             display: flex;
             align-items: center;
@@ -57,6 +75,13 @@
 <body>
     <div class="background"></div>
     <div class="container">
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <h1>Gallery</h1>
         <div class="gallery">
             <img src="image1.png" alt="Image 1" class="gallery-image">
