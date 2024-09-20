@@ -21,18 +21,21 @@
             background-image: url('background blurred image.png');
             background-size: cover;
             background-position: center;
-            filter: blur(8px); /* Adjust blur level as needed */
+            filter: blur(6px); /* Adjust blur level as needed */
             z-index: -1; /* Places background behind content */
         }
 
-        .container {
+       .container {
             width: 80%;
-            margin: 40px auto;
+            max-width: 400px; /* Optional: Control the width of the container */
+            margin: 0; /* Remove default margin */
             background-color: rgba(242, 242, 242, 0.9); /* Light grey with transparency */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative; /* Needed for positioning navigation link */
+            position: fixed; /* Fixed position to anchor the container */
+            bottom: 20px; /* Position 20px from the bottom */
+            left: 20px; /* Position 20px from the left */
         }
 
         .contact {
