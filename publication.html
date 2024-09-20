@@ -33,6 +33,22 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
       }  
   
+      .navigation {  
+        display: flex;  
+        justify-content: flex-end;  
+        margin-bottom: 20px;  
+      }  
+  
+      .navigation a {  
+        text-decoration: none;  
+        color: #337ab7;  
+        margin: 0 10px;  
+      }  
+  
+      .navigation a:hover {  
+        color: #23527c;  
+      }  
+  
       .publication {  
         display: flex;  
         align-items: center;  
@@ -70,6 +86,14 @@
 <body>  
    <div class="background"></div>  
    <div class="container">  
+      <div class="navigation">  
+          <a href="index.html">Home</a>  
+          <a href="cv.html">CV</a>  
+          <a href="projects.html">Projects</a>  
+          <a href="gallery.html">Gallery</a>  
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>  
+      </div>  
       <div class="publication">  
         <div class="publication-description">  
            <h3>An Introduction to Electromagnetic Shielding and Shielding Cables</h3>  
@@ -80,8 +104,8 @@
       </div>  
       <div class="publication">  
         <div class="publication-description">  
-           <h3>An Introdcution to Squeezed States in Quantum Mechanics</h3>  
-           <p>.Squeezed states are a type of quantum state of light (or other quantum systems) that exhibit reduced uncertainty in one observable at the expense of increased uncertainty in another, as defined by the Heisenberg uncertainty principle. This phenomenon allows for enhanced precision measurements beyond the standard quantum limit. Squeezed states are particularly relevant in quantum optics and are used in applications such as quantum communication, quantum computing, and gravitational wave detection. By manipulating the quantum properties of light, squeezed states enable advancements in technologies that require high sensitivity and accuracy.(April 2022)</p>  
+           <h3>An Introduction to Squeezed States in Quantum Mechanics</h3>  
+           <p>Squeezed states are a type of quantum state of light (or other quantum systems) that exhibit reduced uncertainty in one observable at the expense of increased uncertainty in another, as defined by the Heisenberg uncertainty principle. This phenomenon allows for enhanced precision measurements beyond the standard quantum limit. Squeezed states are particularly relevant in quantum optics and are used in applications such as quantum communication, quantum computing, and gravitational wave detection. By manipulating the quantum properties of light, squeezed states enable advancements in technologies that require high sensitivity and accuracy.(April 2022)</p>  
            <a href="https://www.researchgate.net/publication/377158113_SQUEEZED_STATES_in_QUANTUM_MECHANICS?channel=doi&linkId=659795a36f6e450f19caf17f&showFulltext=true" target="_blank" class="publication-link">View Presentation</a>  
         </div>  
         <img src="qm.png" alt="Publication 2" class="publication-image">  
@@ -89,12 +113,11 @@
       <div class="publication">  
         <div class="publication-description">  
            <h3>An Introduction to Dark Matter and Dark Energy</h3>  
-           <p>Dark Matter is a mysterious form of matter that does not emit, absorb, or reflect light, making it invisible. It is thought to account for about 27% of the universe's mass-energy content and influences the gravitational behavior of galaxies and galaxy clusters.
-
-Dark Energy is an unknown form of energy that makes up approximately 68% of the universe and is driving its accelerated expansion. It acts as a repulsive force, counteracting the attractive force of gravity on cosmic scales.(Dec 2020)</p>  
+           <p>Dark Matter is a mysterious form of matter that does not emit, absorb, or reflect light, making it invisible. It is thought to account for about 27% of the universe's mass-energy content and influences the gravitational behavior of galaxies and galaxy clusters.</p>  
+           <p>Dark Energy is an unknown form of energy that makes up approximately 68% of the universe and is driving its accelerated expansion. It acts as a repulsive force, counteracting the attractive force of gravity on cosmic scales.(Dec 2020)</p>  
            <a href="https://www.researchgate.net/publication/372010006_The_Ghost_Of_The_Universe_Dark_Matter_and_Dark_Energy" target="_blank" class="publication-link">View Article</a>  
         </div>  
-        <img src="" alt="universe.png" class="publication-image">  
+        <img src="" alt="Publication 3" class="publication-image">  
       </div>  
    </div>  
 </body>  
