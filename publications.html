@@ -1,123 +1,114 @@
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
-   <meta charset="UTF-8">  
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-   <title>Publications</title>  
-   <style>  
-      body {  
-        margin: 0;  
-        padding: 0;  
-        height: auto; /* Allow height to be determined by content */  
-      }  
-  
-      .background {  
-        position: fixed;  
-        top: 0;  
-        left: 0;  
-        width: 100%;  
-        height: 100%;  
-        background-image: url('background blurred image.png');  
-        background-size: cover;  
-        background-position: center;  
-        filter: blur(8px); /* Adjust blur level as needed */  
-        z-index: -1; /* Places background behind content */  
-      }  
-  
-      .container {  
-        width: 80%;  
-        margin: 40px auto;  
-        background-color: rgba(242, 242, 242, 0.9); /* Light grey with transparency */  
-        padding: 20px;  
-        border-radius: 10px;  
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-      }  
-  
-      .navigation {  
-        display: flex;  
-        justify-content: flex-end;  
-        margin-bottom: 20px;  
-      }  
-  
-      .navigation a {  
-        text-decoration: none;  
-        color: #337ab7;  
-        margin: 0 10px;  
-      }  
-  
-      .navigation a:hover {  
-        color: #23527c;  
-      }  
-  
-      .publication {  
-        display: flex;  
-        align-items: center;  
-        margin-bottom: 20px;  
-        padding: 20px;  
-        background-color: #fff;  
-        border-radius: 10px;  
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-      }  
-  
-      .publication-description {  
-        flex: 1;  
-        padding: 20px;  
-      }  
-  
-      .publication-image {  
-        width: 200px;  
-        height: 200px;  
-        border-radius: 10px;  
-        margin-left: 20px;  
-      }  
-  
-      .publication-link {  
-        text-decoration: none;  
-        color: #337ab7;  
-        margin-top: 10px;  
-        display: inline-block;  
-      }  
-  
-      .publication-link:hover {  
-        color: #23527c;  
-      }  
-   </style>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Publications</title>  
+   <style>  
+      body {  
+        margin: 0;  
+        padding: 0;  
+        height: auto; /* Allow height to be determined by content */  
+        font-family: Arial, sans-serif; /* Set a default font for better readability */  
+      }  
+      .background {  
+        position: fixed;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        height: 100%;  
+        background-image: url('background blurred image.png');  
+        background-size: cover;  
+        background-position: center;  
+        filter: blur(8px); /* Adjust blur level as needed */  
+        z-index: -1; /* Places background behind content */  
+      }  
+      .container {  
+        width: 80%;  
+        margin: 40px auto;  
+        background-color: rgba(242, 242, 242, 0.9); /* Light grey with transparency */  
+        padding: 20px;  
+        border-radius: 10px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+      }  
+      .navigation {  
+        display: flex;  
+        justify-content: flex-end;  
+        margin-bottom: 20px;  
+      }  
+      .navigation a {  
+        text-decoration: none;  
+        color: #337ab7;  
+        margin: 0 15px; /* Increased space between links */  
+      }  
+      .navigation a:hover {  
+        color: #23527c;  
+      }  
+      .publication {  
+        display: flex;  
+        align-items: center;  
+        margin-bottom: 20px;  
+        padding: 20px;  
+        background-color: #fff;  
+        border-radius: 10px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+      }  
+      .publication-description {  
+        flex: 1;  
+        padding: 20px;  
+      }  
+      .publication-image {  
+        width: 200px;  
+        height: 200px;  
+        border-radius: 10px;  
+        margin-left: 20px;  
+      }  
+      .publication-link {  
+        text-decoration: none;  
+        color: #337ab7;  
+        margin-top: 10px;  
+        display: inline-block;  
+      }  
+      .publication-link:hover {  
+        color: #23527c;  
+      }  
+   </style>  
 </head>  
 <body>  
-   <div class="background"></div>  
-   <div class="container">  
-      <div class="navigation">  
-          <a href="index.html">Home</a>  
-          <a href="cv.html">CV</a>  
-          <a href="projects.html">Projects</a>  
-          <a href="gallery.html">Gallery</a>  
-          <a href="publications.html">Publications</a>
-          <a href="contact.html">Contact</a>  
-      </div>  
-      <div class="publication">  
-        <div class="publication-description">  
-           <h3>An Introduction to Electromagnetic Shielding and Shielding Cables</h3>  
-           <p>This paper explores the significance of shielding cables in the context of a rapidly advancing society driven by artificial intelligence and robotics. As automation becomes integral to our future, the prevalence of electromagnetic waves raises concerns about data integrity and security. The paper highlights how shielding cables protect sensitive information from interference caused by stray electromagnetic waves, detailing their operational principles, applications, and practical usage. Through this overview, the importance of secure data transmission in an increasingly data-driven world is emphasized.(Dec2022)</p>  
-           <a href="https://www.researchgate.net/publication/371991373_A_brief_introduction_on_electromagnetic_shielding_and_shielding_cables" target="_blank" class="publication-link">View Article</a>  
-        </div>  
-        <img src="spark.png" alt="Publication 1" class="publication-image">  
-      </div>  
-      <div class="publication">  
-        <div class="publication-description">  
-           <h3>An Introduction to Squeezed States in Quantum Mechanics</h3>  
-           <p>Squeezed states are a type of quantum state of light (or other quantum systems) that exhibit reduced uncertainty in one observable at the expense of increased uncertainty in another, as defined by the Heisenberg uncertainty principle. This phenomenon allows for enhanced precision measurements beyond the standard quantum limit. Squeezed states are particularly relevant in quantum optics and are used in applications such as quantum communication, quantum computing, and gravitational wave detection. By manipulating the quantum properties of light, squeezed states enable advancements in technologies that require high sensitivity and accuracy.(April 2022)</p>  
-           <a href="https://www.researchgate.net/publication/377158113_SQUEEZED_STATES_in_QUANTUM_MECHANICS?channel=doi&linkId=659795a36f6e450f19caf17f&showFulltext=true" target="_blank" class="publication-link">View Presentation</a>  
-        </div>  
-        <img src="qm.png" alt="Publication 2" class="publication-image">  
-      </div>  
-      <div class="publication">  
-        <div class="publication-description">  
-           <h3>An Introduction to Dark Matter and Dark Energy</h3>  
-           <p>Dark Matter is a mysterious form of matter that does not emit, absorb, or reflect light, making it invisible. It is thought to account for about 27% of the universe's mass-energy content and influences the gravitational behavior of galaxies and galaxy clusters. Dark Energy is an unknown form of energy that makes up approximately 68% of the universe and is driving its accelerated expansion. It acts as a repulsive force, counteracting the attractive force of gravity on cosmic scales.(Dec 2020)</p>  
-           <a href="https://www.researchgate.net/publication/372010006_The_Ghost_Of_The_Universe_Dark_Matter_and_Dark_Energy" target="_blank" class="publication-link">View Article</a>  
-        </div>  
-        <img src="universe.png" alt="Publication 3" class="publication-image">  
-      </div>  
-   </div>  
+   <div class="background"></div>  
+   <div class="container">  
+      <div class="navigation">  
+          <a href="index.html">Home</a>  
+          <a href="cv.html">CV</a>  
+          <a href="projects.html">Projects</a>  
+          <a href="gallery.html">Gallery</a>  
+          <a href="publications.html">Publications</a>  
+          <a href="contact.html">Contact</a>  
+      </div>  
+      <div class="publication">  
+        <div class="publication-description">  
+           <h3>An Introduction to Electromagnetic Shielding and Shielding Cables</h3>  
+           <p>This paper explores the significance of shielding cables in the context of a rapidly advancing society driven by artificial intelligence and robotics. As automation becomes integral to our future, the prevalence of electromagnetic waves raises concerns about data integrity and security. The paper highlights how shielding cables protect sensitive information from interference caused by stray electromagnetic waves, detailing their operational principles, applications, and practical usage. Through this overview, the importance of secure data transmission in an increasingly data-driven world is emphasized. (Dec 2022)</p>  
+           <a href="https://www.researchgate.net/publication/371991373_A_brief_introduction_on_electromagnetic_shielding_and_shielding_cables" target="_blank" class="publication-link">View Article</a>  
+        </div>  
+        <img src="spark.png" alt="Publication 1" class="publication-image">  
+      </div>  
+      <div class="publication">  
+        <div class="publication-description">  
+           <h3>An Introduction to Squeezed States in Quantum Mechanics</h3>  
+           <p>Squeezed states are a type of quantum state of light (or other quantum systems) that exhibit reduced uncertainty in one observable at the expense of increased uncertainty in another, as defined by the Heisenberg uncertainty principle. This phenomenon allows for enhanced precision measurements beyond the standard quantum limit. Squeezed states are particularly relevant in quantum optics and are used in applications such as quantum communication, quantum computing, and gravitational wave detection. By manipulating the quantum properties of light, squeezed states enable advancements in technologies that require high sensitivity and accuracy. (April 2022)</p>  
+           <a href="https://www.researchgate.net/publication/377158113_SQUEEZED_STATES_in_QUANTUM_MECHANICS?channel=doi&linkId=659795a36f6e450f19caf17f&showFulltext=true" target="_blank" class="publication-link">View Presentation</a>  
+        </div>  
+        <img src="qm.png" alt="Publication 2" class="publication-image">  
+      </div>  
+      <div class="publication">  
+        <div class="publication-description">  
+           <h3>An Introduction to Dark Matter and Dark Energy</h3>  
+           <p>Dark Matter is a mysterious form of matter that does not emit, absorb, or reflect light, making it invisible. It is thought to account for about 27% of the universe's mass-energy content and influences the gravitational behavior of galaxies and galaxy clusters. Dark Energy is an unknown form of energy that makes up approximately 68% of the universe and is driving its accelerated expansion. It acts as a repulsive force, counteracting the attractive force of gravity on cosmic scales. (Dec 2020)</p>  
+           <a href="https://www.researchgate.net/publication/372010006_The_Ghost_Of_The_Universe_Dark_Matter_and_Dark_Energy" target="_blank" class="publication-link">View Article</a>  
+        </div>  
+        <img src="universe.png" alt="Publication 3" class="publication-image">  
+      </div>  
+   </div>  
 </body>  
 </html>
