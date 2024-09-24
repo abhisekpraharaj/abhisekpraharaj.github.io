@@ -63,6 +63,28 @@ body {
   border-radius: 10px;
 }
 
+.navigation {
+  display: flex;
+  justify-content: flex-start; /* Ensure items align from the left */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping to the next line */
+  padding: 10px 0; /* Optional: Add some padding for better appearance */
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on mobile */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #337ab7;
+  margin: 0 10px;
+  display: inline-block; /* Ensure links are treated as block-level elements for spacing */
+  padding: 10px 0; /* Optional: Add padding for touch targets on mobile */
+}
+
+.navigation a:hover {
+  color: #23527c;
+}
+
+
 .gallery-description {
   font-size: 18px;
   margin: 20px;
