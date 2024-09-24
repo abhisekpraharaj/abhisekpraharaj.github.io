@@ -41,9 +41,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Updated navigation for horizontal scroll on mobile */
         .navigation {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start; /* Align links to the left */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevents wrapping */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
             margin-bottom: 20px;
         }
 
@@ -51,6 +55,7 @@
             text-decoration: none;
             color: #337ab7;
             margin: 0 10px;
+            display: inline-block; /* Ensure links stay in a row */
         }
 
         .navigation a:hover {
@@ -106,7 +111,7 @@
             </div>
             <div class="gallery-item">
                 <img src="c.png" alt="Image C" class="gallery-image">
-            </div> 
+            </div> <!-- Closing gallery-item div properly -->
         </div>
     </div>
 </body>
