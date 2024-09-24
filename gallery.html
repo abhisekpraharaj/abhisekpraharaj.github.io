@@ -9,7 +9,13 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            overflow: hidden; /* Prevents scrollbars */
+            overflow: hidden; /* Prevents scrollbars on larger screens */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow: auto; /* Allows scrolling on mobile */
+            }
         }
 
         .background {
@@ -93,15 +99,13 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="a.png" alt="Image A" class="gallery-image">
-                
             </div>
             <div class="gallery-item">
                 <img src="b.png" alt="Image B" class="gallery-image">
-
             </div>
             <div class="gallery-item">
                 <img src="c.png" alt="Image C" class="gallery-image">
-
+            </div> <!-- Close gallery-item div properly -->
         </div>
     </div>
 </body>
