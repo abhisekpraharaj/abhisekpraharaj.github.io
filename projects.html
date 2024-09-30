@@ -36,9 +36,13 @@
         }
 
         .navigation {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 20px;
+            padding: 10px;
+            z-index: 1000;
         }
 
         .navigation a {
@@ -83,6 +87,38 @@
 
         .project-link:hover {
             color: #23527c;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column; /* Stack content vertically on mobile */
+                text-align: center;
+            }
+
+            .project-image {
+                width: 100%;
+                height: auto;
+                margin: 0 0 20px 0; /* Remove left margin and add bottom margin */
+            }
+
+            .navigation {
+                justify-content: center; /* Center the navigation links on mobile */
+                flex-wrap: wrap; /* Wrap items to fit better on smaller screens */
+            }
+
+            .container {
+                width: 95%; /* Make container wider on mobile for better use of space */
+                padding: 15px;
+            }
+
+            .project-description {
+                padding: 10px;
+            }
+
+            .navigation a {
+                margin: 5px; /* Less margin for links on mobile */
+            }
         }
     </style>
 </head>
