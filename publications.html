@@ -11,6 +11,7 @@
         height: auto; /* Allow height to be determined by content */  
         font-family: Arial, sans-serif; /* Set a default font for better readability */  
       }  
+
       .background {  
         position: fixed;  
         top: 0;  
@@ -23,6 +24,7 @@
         filter: blur(8px); /* Adjust blur level as needed */  
         z-index: -1; /* Places background behind content */  
       }  
+
       .container {  
         width: 80%;  
         margin: 40px auto;  
@@ -31,19 +33,23 @@
         border-radius: 10px;  
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
       }  
+
       .navigation {  
         display: flex;  
         justify-content: flex-end;  
         margin-bottom: 20px;  
       }  
+
       .navigation a {  
         text-decoration: none;  
         color: #337ab7;  
         margin: 0 15px; /* Increased space between links */  
       }  
+
       .navigation a:hover {  
         color: #23527c;  
       }  
+
       .publication {  
         display: flex;  
         align-items: center;  
@@ -53,24 +59,61 @@
         border-radius: 10px;  
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
       }  
+
       .publication-description {  
         flex: 1;  
         padding: 20px;  
       }  
+
       .publication-image {  
         width: 200px;  
         height: 200px;  
         border-radius: 10px;  
         margin-left: 20px;  
+        object-fit: cover; /* Ensures the image maintains aspect ratio without distortion */  
       }  
+
       .publication-link {  
         text-decoration: none;  
         color: #337ab7;  
         margin-top: 10px;  
         display: inline-block;  
       }  
+
       .publication-link:hover {  
         color: #23527c;  
+      }  
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {  
+        .container {  
+          width: 95%; /* Use more space on mobile for better layout */  
+          padding: 15px;  
+        }  
+
+        .navigation {  
+          justify-content: center; /* Center the navigation links on mobile */  
+          flex-wrap: wrap; /* Wrap items on smaller screens */  
+        }  
+
+        .navigation a {  
+          margin: 5px; /* Reduce margin for links on mobile */  
+        }  
+
+        .publication {  
+          flex-direction: column; /* Stack content vertically on mobile */  
+          text-align: center;  
+        }  
+
+        .publication-image {  
+          width: 100%; /* Make images take full width on mobile */  
+          height: auto; /* Adjust image height to maintain aspect ratio */  
+          margin: 0 0 20px 0; /* Remove left margin and add bottom margin */  
+        }  
+
+        .publication-description {  
+          padding: 10px; /* Reduce padding for mobile */  
+        }  
       }  
    </style>  
 </head>  
@@ -85,6 +128,8 @@
           <a href="publications.html">Publications</a>  
           <a href="contact.html">Contact</a>  
       </div>  
+
+      <!-- Publication Entries -->  
       <div class="publication">  
         <div class="publication-description">  
            <h3>An Introduction to Electromagnetic Shielding and Shielding Cables</h3>  
@@ -93,6 +138,7 @@
         </div>  
         <img src="spark.png" alt="Publication 1" class="publication-image">  
       </div>  
+
       <div class="publication">  
         <div class="publication-description">  
            <h3>An Introduction to Squeezed States in Quantum Mechanics</h3>  
@@ -101,6 +147,7 @@
         </div>  
         <img src="qm.png" alt="Publication 2" class="publication-image">  
       </div>  
+
       <div class="publication">  
         <div class="publication-description">  
            <h3>An Introduction to Dark Matter and Dark Energy</h3>  
