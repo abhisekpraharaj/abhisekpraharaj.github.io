@@ -70,6 +70,33 @@
             font-size: 18px;
             margin: 20px;
         }
+
+        /* Animation styles */
+        .greeting-container {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            height: 50px; /* Adjust the height of the animation container */
+            line-height: 50px; /* Center text vertically */
+        }
+
+        .greeting-text {
+            display: inline-block;
+            animation: slideText 8s infinite linear;
+            position: relative;
+        }
+
+        @keyframes slideText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -88,8 +115,24 @@
         </div>
         <div class="lower-half">
             <h1>Welcome to my website!</h1>
+            <!-- Greeting Animation Container -->
+            <div class="greeting-container">
+                <div class="greeting-text" id="greetingText">||ନମସ୍କାର||</div>
+            </div>
             <p class="about-me">I am Abhisek Praharaj, a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems.</p>
         </div>
     </div>
+
+    <script>
+        const greetings = ["||ନମସ୍କାର||", "||नमस्कार||", "||Greetings||", "||namaskāra||", "||こんにちは||"];
+        let index = 0;
+
+        const greetingText = document.getElementById("greetingText");
+
+        setInterval(() => {
+            index = (index + 1) % greetings.length;
+            greetingText.textContent = greetings[index];
+        }, 2000);  // Change every 2 seconds
+    </script>
 </body>
 </html>
