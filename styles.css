@@ -1,36 +1,17 @@
 /* General Body Styles */
 body {
-    margin: 0; /* Remove default margin */
-}
-
-/* Background Image */
-.background {
     background-image: url('bg_image.png'); /* Your background image */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the background image */
-    position: fixed; /* Fix it to the viewport */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    z-index: 1; /* Below other content */
-}
-
-/* Blur Overlay */
-.blur-overlay {
-    position: fixed; /* Fix it to the viewport */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background: rgba(255, 255, 255, 0.5); /* White with transparency */
-    backdrop-filter: blur(8px); /* Apply blur effect */
-    z-index: 2; /* Above the background */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrollbars */
+    font-family: Arial, sans-serif; /* Set a default font */
 }
 
 /* Container for Main Content */
 .content {
-    position: relative; /* Position relative for child elements */
-    z-index: 3; /* Ensure it's above the overlay */
-    width: 80%;
+    width: 90%; /* Full width with some margin */
     max-width: 1200px; /* Limit max width for large screens */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Space inside the container */
@@ -74,22 +55,15 @@ body {
 
 /* Greeting Animation Styles */
 .greeting-container {
-    font-size: 2em; /* Adjust font size */
+    font-size: 1.5em; /* Adjust font size for smaller devices */
     font-weight: bold; /* Bold text */
     text-align: center; /* Center text */
     margin-top: 20px; /* Space above */
-    overflow: hidden; /* Prevent overflow */
-    white-space: nowrap; /* Prevent text wrapping */
 }
 
-.greeting-text {
-    display: inline-block; /* Allow animation */
-    animation: slide 10s linear infinite; /* Sliding animation */
-}
-
-@keyframes slide {
-    0% { transform: translateX(100%); } 
-    100% { transform: translateX(-100%); } /* Slides from right to left */
+.intro-text {
+    font-size: 1em; /* Adjust font size for intro text */
+    margin: 10px 0; /* Space around text */
 }
 
 /* Education Timeline (Curvy Road) Styles */
@@ -99,48 +73,41 @@ body {
     margin: 40px auto; /* Center the timeline */
 }
 
-.timeline-line {
-    position: absolute; /* Absolute positioning */
-    width: 4px; /* Width of the line */
-    background-color: #2196F3; /* Line color */
-    top: 0; /* Top alignment */
-    bottom: 0; /* Bottom alignment */
-    left: 50%; /* Center line */
-    margin-left: -2px; /* Center adjustment */
-}
-
 .education-item {
     padding: 10px 40px; /* Space around each item */
     position: relative; /* Position relative for child elements */
-    width: 50%; /* Set width */
-    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    text-align: left; /* Left align text */
     font-size: 16px; /* Readable font size */
 }
 
-.education-item.left {
-    left: 0; /* Align left */
-}
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center align navigation */
+    }
 
-.education-item.right {
-    left: 50%; /* Align right */
-}
+    .profile-picture {
+        width: 60px; /* Smaller profile picture */
+        height: 60px; /* Maintain aspect ratio */
+    }
 
-.education-item .date {
-    font-size: 14px; /* Smaller font for dates */
-    color: #888; /* Muted color for dates */
-}
+    .greeting-container {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
 
-.education-item .degree {
-    font-weight: bold; /* Bold text for degree */
-    color: #333; /* Darker color for degrees */
+    .intro-text {
+        font-size: 0.9em; /* Smaller font for intro text */
+    }
 }
 
 /* Curvy timeline circles */
 .education-item::before {
     content: ''; /* Empty content for circle */
     position: absolute; /* Absolute positioning */
-    width: 20px; /* Circle size */
-    height: 20px; /* Circle size */
+    width: 10px; /* Circle size */
+    height: 10px; /* Circle size */
     background-color: #2196F3; /* Circle color */
     border-radius: 50%; /* Circular shape */
     top: 15px; /* Position */
@@ -148,8 +115,9 @@ body {
     z-index: 1; /* Ensure circle is on top */
 }
 
-.education-item.right::before {
-    right: -10px; /* Right alignment for right items */
+/* Education Item Alignments */
+.education-item.right {
+    text-align: right; /* Align text to right */
 }
 
 /* Project and Gallery Styles */
@@ -176,9 +144,5 @@ body {
 /* Links in Projects and Gallery */
 .project-link, .gallery-link {
     text-decoration: none; /* Remove underline from links */
-    color: #337ab7; /* Link color */
-}
-
-.project-link:hover, .gallery-link:hover {
-    color: #23527c; /* Darker link color on hover */
+    color: #2196F3; /* Link color */
 }
