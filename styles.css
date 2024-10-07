@@ -1,25 +1,143 @@
-/* General Styles */
+/* Body and Background Styles */
 body {
     background-image: url('bg_image.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
-    filter: none;
+    filter: blur(8px); /* Blur the background */
     margin: 0;
 }
 
 .container {
     width: 80%;
     margin: 40px auto;
-    background: rgba(242, 242, 242, 0.8); /* Semi-transparent background */
+    background: rgba(242, 242, 242, 0.9); /* Semi-transparent background for content */
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px); /* Blurred content for clarity */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
-/* Project and Gallery Section */
+/* Profile Picture Styles */
+.profile-picture {
+    width: 200px; /* Reduced size */
+    height: 200px;
+    border-radius: 50%; /* Circular profile picture */
+    margin: 20px;
+    float: left; /* Align to the left */
+}
+
+/* Navigation Bar Styles */
+.navigation {
+    display: flex;
+    justify-content: flex-start; /* Align from the left */
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll for mobile */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff; /* White color for visibility */
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.navigation a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+
+/* Greeting Animation Styles */
+.greeting-container {
+    font-size: 1.5em; /* Adjusted font size */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px; /* Adjusted height */
+    line-height: 40px;
+}
+
+.greeting-text {
+    display: inline-block;
+    animation: slide 10s linear infinite; /* Sliding animation */
+}
+
+@keyframes slide {
+    0% { transform: translateX(100%); } 
+    100% { transform: translateX(-100%); } /* Slides from right to left */
+}
+
+/* Education Timeline (Curvy Road) Styles */
+.education-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 4px;
+    background-color: #2196F3;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px; /* Center line */
+}
+
+.education-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    font-size: 16px; /* Clean, readable font size */
+}
+
+.education-item.left {
+    left: 0;
+}
+
+.education-item.right {
+    left: 50%;
+}
+
+.education-item .date {
+    font-size: 14px;
+    color: #888; /* Muted color for dates */
+}
+
+.education-item .degree {
+    font-weight: bold;
+    color: #333; /* Bolder color for degrees */
+}
+
+/* Curvy timeline circles */
+.education-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.education-item.left::before {
+    left: -10px;
+}
+
+.education-item.right::before {
+    right: -10px;
+}
+
+/* Project Section */
 .project {
     margin: 20px;
     padding: 20px;
@@ -50,6 +168,7 @@ body {
     color: #23527c;
 }
 
+/* Gallery Section */
 .gallery {
     margin: 20px;
     padding: 20px;
@@ -68,127 +187,4 @@ body {
 .gallery-description {
     font-size: 18px;
     margin: 20px;
-}
-
-/* Navigation Bar */
-.navigation {
-    display: flex;
-    justify-content: flex-start; /* Ensure items align from the left */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    white-space: nowrap; /* Prevent items from wrapping to the next line */
-    padding: 10px 0; /* Optional: Add some padding for better appearance */
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on mobile */
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #337ab7;
-    margin: 0 10px;
-    display: inline-block; /* Ensure links are treated as block-level elements for spacing */
-    padding: 10px 0; /* Optional: Add padding for touch targets on mobile */
-}
-
-.navigation a:hover {
-    color: #23527c;
-}
-
-/* Greeting Animation Styles */
-.greeting-container {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    height: 50px; /* Adjust the height */
-    line-height: 50px; /* Center text vertically */
-}
-
-.greeting-text {
-    display: inline-block;
-    position: relative;
-    animation: slideText 4s linear infinite; /* Adjust timing if needed */
-}
-
-@keyframes slideText {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
-
-/* Timeline (Curvy Education Road) Styles */
-.education-timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: auto;
-    padding-top: 50px;
-}
-
-.education-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-}
-
-.education-item.left {
-    left: 0;
-}
-
-.education-item.right {
-    left: 50%;
-}
-
-.education-item.right .content-box {
-    left: -100%; /* Adjust to shift the box for the right-side items */
-}
-
-.education-item .content-box {
-    padding: 15px;
-    background-color: #337ab7;
-    color: white;
-    position: relative;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.education-item.left::after,
-.education-item.right::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    width: 10px;
-    height: 10px;
-    background-color: #337ab7;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.education-item.left::after {
-    left: 40px;
-}
-
-.education-item.right::after {
-    right: 40px;
-}
-
-.education-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background-color: #337ab7;
-    z-index: 0;
 }
