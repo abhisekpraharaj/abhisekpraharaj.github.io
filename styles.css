@@ -1,28 +1,28 @@
-/* Body and Background Styles */
+/* General Body Styles */
 body {
     background-image: url('bg_image.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
-    filter: blur(8px); /* Blur the background */
     margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
+/* Container for Main Content */
 .container {
     width: 80%;
-    margin: 40px auto;
-    background: rgba(242, 242, 242, 0.9); /* Semi-transparent background for content */
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* Blurred content for clarity */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(242, 242, 242, 0.9); /* Semi-transparent background for content */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Allows positioning of child elements */
 }
 
 /* Profile Picture Styles */
 .profile-picture {
-    width: 200px; /* Reduced size */
-    height: 200px;
+    width: 100px; /* Reduced size */
+    height: 100px;
     border-radius: 50%; /* Circular profile picture */
     margin: 20px;
     float: left; /* Align to the left */
@@ -31,19 +31,19 @@ body {
 /* Navigation Bar Styles */
 .navigation {
     display: flex;
-    justify-content: flex-start; /* Align from the left */
+    justify-content: flex-end; /* Align navigation links to the right */
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
-    white-space: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Horizontal scroll if needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scroll for mobile */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    position: relative; /* Ensures it stays above the background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a slight shadow for separation */
 }
 
 .navigation a {
     text-decoration: none;
-    color: #fff; /* White color for visibility */
-    margin: 0 10px;
-    padding: 10px 0;
+    color: #ffffff; /* White color for visibility */
+    margin: 0 15px;
+    padding: 10px;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
 .navigation a:hover {
@@ -52,14 +52,12 @@ body {
 
 /* Greeting Animation Styles */
 .greeting-container {
-    font-size: 1.5em; /* Adjusted font size */
+    font-size: 2em; /* Adjusted font size */
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
     overflow: hidden;
-    white-space: nowrap;
-    height: 40px; /* Adjusted height */
-    line-height: 40px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .greeting-text {
@@ -75,19 +73,18 @@ body {
 /* Education Timeline (Curvy Road) Styles */
 .education-timeline {
     position: relative;
-    max-width: 1000px;
-    margin: auto;
-    padding-top: 50px;
+    max-width: 800px;
+    margin: 40px auto; /* Center the timeline */
 }
 
 .timeline-line {
     position: absolute;
     width: 4px;
-    background-color: #2196F3;
+    background-color: #2196F3; /* Line color */
     top: 0;
     bottom: 0;
-    left: 50%;
-    margin-left: -2px; /* Center line */
+    left: 50%; /* Center line */
+    margin-left: -2px; /* Center adjustment */
 }
 
 .education-item {
@@ -122,69 +119,44 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    right: -10px;
-    background-color: #2196F3;
-    border-radius: 50%;
+    background-color: #2196F3; /* Circle color */
+    border-radius: 50%; /* Circle shape */
     top: 15px;
+    left: -10px; /* Center alignment */
     z-index: 1;
 }
 
-.education-item.left::before {
-    left: -10px;
-}
-
 .education-item.right::before {
-    right: -10px;
+    right: -10px; /* Right-side alignment */
 }
 
-/* Project Section */
-.project {
-    margin: 20px;
+/* Project and Gallery Styles */
+.project, .gallery {
+    margin: 20px 0;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.project-image {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+.project-image, .gallery-image {
+    width: 100px; /* Smaller image size */
+    height: 100px;
+    margin: 10px;
     border-radius: 10px;
 }
 
-.project-description {
-    font-size: 18px;
-    margin: 20px;
-}
-
-.project-link {
-    text-decoration: none;
-    color: #337ab7;
+.project-description, .gallery-description {
+    font-size: 16px;
     margin: 10px;
 }
 
-.project-link:hover {
+/* Links in Projects and Gallery */
+.project-link, .gallery-link {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.project-link:hover, .gallery-link:hover {
     color: #23527c;
-}
-
-/* Gallery Section */
-.gallery {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-image {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.gallery-description {
-    font-size: 18px;
-    margin: 20px;
 }
