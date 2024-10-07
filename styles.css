@@ -21,9 +21,9 @@ body {
 
 /* Profile Picture Styles */
 .profile-picture {
-    width: 200px; /* Reduced size */
-    height: 200px;
-    border-radius: 50%; /* Circular profile picture */
+    width: 100px; /* Reduced size */
+    height: 100px;
+    border-radius: 30%; /* Circular profile picture */
     margin: 20px;
     float: left; /* Align to the left */
 }
