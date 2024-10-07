@@ -71,7 +71,7 @@
             margin: 20px;
         }
 
-        /* Animation styles */
+        /* Greeting container */
         .greeting-container {
             font-size: 2em;
             font-weight: bold;
@@ -79,22 +79,30 @@
             margin-top: 20px;
             overflow: hidden;
             white-space: nowrap;
-            height: 50px; /* Adjust the height of the animation container */
+            height: 50px; /* Adjust the height */
             line-height: 50px; /* Center text vertically */
         }
 
         .greeting-text {
             display: inline-block;
-            animation: slideText 8s infinite linear;
             position: relative;
+            animation: slideText 4s linear infinite; /* Adjust timing if needed */
         }
 
         @keyframes slideText {
             0% {
                 transform: translateX(100%);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
             }
             100% {
                 transform: translateX(-100%);
+                opacity: 0;
             }
         }
     </style>
@@ -129,10 +137,13 @@
 
         const greetingText = document.getElementById("greetingText");
 
-        setInterval(() => {
-            index = (index + 1) % greetings.length;
+        function updateGreeting() {
             greetingText.textContent = greetings[index];
-        }, 2000);  // Change every 2 seconds
+            index = (index + 1) % greetings.length;
+        }
+
+        // Change the greeting every 4 seconds (synchronized with the CSS animation)
+        setInterval(updateGreeting, 4000); 
     </script>
 </body>
 </html>
