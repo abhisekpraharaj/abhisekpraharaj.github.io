@@ -1,15 +1,35 @@
 /* General Body Styles */
 body {
+    margin: 0; /* Remove default margin */
+}
+
+/* Background Image */
+.background {
     background-image: url('bg_image.png'); /* Your background image */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the background image */
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrollbars */
+    position: fixed; /* Fix it to the viewport */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 1; /* Below other content */
+}
+
+/* Blur Overlay */
+.blur-overlay {
+    position: fixed; /* Fix it to the viewport */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(255, 255, 255, 0.5); /* White with transparency */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    z-index: 2; /* Above the background */
 }
 
 /* Container for Main Content */
-.container {
+.content {
+    position: relative; /* Position relative for child elements */
+    z-index: 3; /* Ensure it's above the overlay */
     width: 80%;
     max-width: 1200px; /* Limit max width for large screens */
     margin: 0 auto; /* Center the container */
@@ -17,7 +37,6 @@ body {
     background: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
-    position: relative; /* Allows positioning of child elements */
 }
 
 /* Profile Picture Styles */
