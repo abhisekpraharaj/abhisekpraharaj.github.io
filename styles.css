@@ -22,8 +22,8 @@ body {
 
 /* Profile Picture Styles */
 .profile-picture {
-    width: 80px; /* Reduced size */
-    height: 80px; /* Maintain aspect ratio */
+    width: 100px; /* Increase size */
+    height: 100px; /* Maintain aspect ratio */
     border-radius: 50%; /* Circular profile picture */
     margin: 20px; /* Space around the picture */
     float: left; /* Align to the left */
@@ -47,6 +47,7 @@ body {
     margin: 0 15px; /* Space between links */
     padding: 10px; /* Space inside links */
     transition: color 0.3s; /* Smooth color transition */
+    font-size: 14px; /* Smaller font size for links */
 }
 
 .navigation a:hover {
@@ -55,7 +56,7 @@ body {
 
 /* Greeting Animation Styles */
 .greeting-container {
-    font-size: 1.5em; /* Adjust font size for smaller devices */
+    font-size: 1.2em; /* Adjust font size for smaller devices */
     font-weight: bold; /* Bold text */
     text-align: center; /* Center text */
     margin-top: 20px; /* Space above */
@@ -64,6 +65,7 @@ body {
 .intro-text {
     font-size: 1em; /* Adjust font size for intro text */
     margin: 10px 0; /* Space around text */
+    line-height: 1.5; /* Improved line spacing */
 }
 
 /* Education Timeline (Curvy Road) Styles */
@@ -89,12 +91,12 @@ body {
     }
 
     .profile-picture {
-        width: 60px; /* Smaller profile picture */
-        height: 60px; /* Maintain aspect ratio */
+        width: 80px; /* Smaller profile picture for mobile */
+        height: 80px; /* Maintain aspect ratio */
     }
 
     .greeting-container {
-        font-size: 1.2em; /* Adjust font size for mobile */
+        font-size: 1.1em; /* Adjust font size for mobile */
     }
 
     .intro-text {
@@ -141,8 +143,4 @@ body {
     margin: 10px; /* Space around text */
 }
 
-/* Links in Projects and Gallery */
-.project-link, .gallery-link {
-    text-decoration: none; /* Remove underline from links */
-    color: #2196F3; /* Link color */
-}
+/* Add any additional styles here */
