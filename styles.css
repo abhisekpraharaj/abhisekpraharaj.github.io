@@ -1,67 +1,70 @@
 /* General Body Styles */
 body {
-    background-image: url('bg_image.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
+    background-image: url('bg_image.png'); /* Your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
     overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Container for Main Content */
 .container {
     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(242, 242, 242, 0.9); /* Semi-transparent background for content */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px; /* Limit max width for large screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Space inside the container */
+    background: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
     position: relative; /* Allows positioning of child elements */
 }
 
 /* Profile Picture Styles */
 .profile-picture {
-    width: 100px; /* Reduced size */
-    height: 100px;
+    width: 80px; /* Reduced size */
+    height: 80px; /* Maintain aspect ratio */
     border-radius: 50%; /* Circular profile picture */
-    margin: 20px;
+    margin: 20px; /* Space around the picture */
     float: left; /* Align to the left */
+    border: 2px solid white; /* Add a border to improve visibility */
 }
 
 /* Navigation Bar Styles */
 .navigation {
-    display: flex;
-    justify-content: flex-end; /* Align navigation links to the right */
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
-    position: relative; /* Ensures it stays above the background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a slight shadow for separation */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Evenly space links */
+    padding: 10px 0; /* Space above and below the nav */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+    position: relative; /* Ensure it stays above the background */
+    z-index: 10; /* Bring nav to the front */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for separation */
 }
 
 .navigation a {
-    text-decoration: none;
-    color: #ffffff; /* White color for visibility */
-    margin: 0 15px;
-    padding: 10px;
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* White color for links */
+    margin: 0 15px; /* Space between links */
+    padding: 10px; /* Space inside links */
     transition: color 0.3s; /* Smooth color transition */
 }
 
 .navigation a:hover {
-    color: #ffcc00; /* Highlight on hover */
+    color: #ffcc00; /* Highlight color on hover */
 }
 
 /* Greeting Animation Styles */
 .greeting-container {
-    font-size: 2em; /* Adjusted font size */
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    overflow: hidden;
-    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 2em; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space above */
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .greeting-text {
-    display: inline-block;
+    display: inline-block; /* Allow animation */
     animation: slide 10s linear infinite; /* Sliding animation */
 }
 
@@ -72,91 +75,91 @@ body {
 
 /* Education Timeline (Curvy Road) Styles */
 .education-timeline {
-    position: relative;
-    max-width: 800px;
+    position: relative; /* Position relative for child elements */
+    max-width: 800px; /* Limit width */
     margin: 40px auto; /* Center the timeline */
 }
 
 .timeline-line {
-    position: absolute;
-    width: 4px;
+    position: absolute; /* Absolute positioning */
+    width: 4px; /* Width of the line */
     background-color: #2196F3; /* Line color */
-    top: 0;
-    bottom: 0;
+    top: 0; /* Top alignment */
+    bottom: 0; /* Bottom alignment */
     left: 50%; /* Center line */
     margin-left: -2px; /* Center adjustment */
 }
 
 .education-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    text-align: center;
-    font-size: 16px; /* Clean, readable font size */
+    padding: 10px 40px; /* Space around each item */
+    position: relative; /* Position relative for child elements */
+    width: 50%; /* Set width */
+    text-align: center; /* Center text */
+    font-size: 16px; /* Readable font size */
 }
 
 .education-item.left {
-    left: 0;
+    left: 0; /* Align left */
 }
 
 .education-item.right {
-    left: 50%;
+    left: 50%; /* Align right */
 }
 
 .education-item .date {
-    font-size: 14px;
+    font-size: 14px; /* Smaller font for dates */
     color: #888; /* Muted color for dates */
 }
 
 .education-item .degree {
-    font-weight: bold;
-    color: #333; /* Bolder color for degrees */
+    font-weight: bold; /* Bold text for degree */
+    color: #333; /* Darker color for degrees */
 }
 
 /* Curvy timeline circles */
 .education-item::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
+    content: ''; /* Empty content for circle */
+    position: absolute; /* Absolute positioning */
+    width: 20px; /* Circle size */
+    height: 20px; /* Circle size */
     background-color: #2196F3; /* Circle color */
-    border-radius: 50%; /* Circle shape */
-    top: 15px;
-    left: -10px; /* Center alignment */
-    z-index: 1;
+    border-radius: 50%; /* Circular shape */
+    top: 15px; /* Position */
+    left: -10px; /* Align */
+    z-index: 1; /* Ensure circle is on top */
 }
 
 .education-item.right::before {
-    right: -10px; /* Right-side alignment */
+    right: -10px; /* Right alignment for right items */
 }
 
 /* Project and Gallery Styles */
 .project, .gallery {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Space around sections */
+    padding: 20px; /* Space inside sections */
+    border: 1px solid #ddd; /* Border for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .project-image, .gallery-image {
-    width: 100px; /* Smaller image size */
-    height: 100px;
-    margin: 10px;
-    border-radius: 10px;
+    width: 100px; /* Image size */
+    height: 100px; /* Maintain aspect ratio */
+    margin: 10px; /* Space around images */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .project-description, .gallery-description {
-    font-size: 16px;
-    margin: 10px;
+    font-size: 16px; /* Readable font size */
+    margin: 10px; /* Space around text */
 }
 
 /* Links in Projects and Gallery */
 .project-link, .gallery-link {
-    text-decoration: none;
-    color: #337ab7;
+    text-decoration: none; /* Remove underline from links */
+    color: #337ab7; /* Link color */
 }
 
 .project-link:hover, .gallery-link:hover {
-    color: #23527c;
+    color: #23527c; /* Darker link color on hover */
 }
