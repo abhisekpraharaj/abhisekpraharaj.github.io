@@ -3,74 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Abhisek Praharaj - Interactive Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f0f5f9;
+            color: #1e2022;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #1e2022;
+            color: #ffffff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(30, 32, 34, 0.9);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #52616b;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('bg_image.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #52616b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cta-button:hover {
+            background-color: #3e4a52;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #52616b;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #f0f5f9;
+            border: 4px solid #52616b;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            transform: translateX(20px);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #52616b;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #52616b;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #52616b;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #52616b transparent transparent;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid #52616b;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #52616b transparent transparent;
+            }
+
+            .timeline-item::after {
+                left: 15px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+
+        .greeting-text {
+            font-size: 2em;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: scale(0.8);
+        }
+    </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="content">
-        <div class="upper-half">
-            <img src="profile.png" alt="Profile Picture" class="profile-picture">
-            <div class="navigation">
-                <a href="index.html">Home</a>
-                <a href="cv.html">CV</a>
-                <a href="projects.html">Projects</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="publications.html">Publications</a>
-                <a href="contact.html">Contact</a>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AP</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="profile.png" alt="Abhisek Praharaj" class="profile-picture">
+            <h1>Abhisek Praharaj</h1>
+            <div class="greeting-text" id="greetingText">||ନମସ୍କାର||</div>
+            <p>Graduate of IISER Berhampur with a passion for physics and computational research.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a strong foundation in both theoretical and experimental physics. My expertise includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, applying my skills to solve complex physics problems.
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Educational Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>IISER Berhampur (2019-2024)</h3>
+                        <p>BS-MS in Physics</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SSVM Neelkanth Nagar (2016-2018)</h3>
+                        <p>12th Standard</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SSVM Khurda (2007-2016)</h3>
+                        <p>10th Standard</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Greeting Animation Section -->
-        <div class="lower-half">
-            <div class="greeting-container">
-                <h1>Welcome to my website!</h1>
-                <div class="greeting-text" id="greetingText">||ନମସ୍କାର||</div>
-                <p class="intro-text">
-                    I am Abhisek Praharaj, a graduate of the Indian Institute of Science Education and Research (IISER), Berhampur, with a dual degree in BS-MS, majoring in Physics. My academic and research interests lie in atomic and nuclear physics, high-energy physics, machine learning, and computational physics. With a strong foundation in both theoretical and experimental physics, I have gained hands-on experience working on projects ranging from particle detection to the application of deep learning in high-energy physics. My expertise also includes programming in Python and C++, data analysis using ROOT (CERN), and a deep understanding of machine learning techniques. Currently, I am focused on computational research, where I apply my skills to solve complex physics problems.
-                </p>
-            </div>
-
-            <!-- Educational Roadmap -->
-            <h2>Educational Roadmap</h2>
-            <section class="education-timeline">
-                <div class="education-item left">
-                    <div class="content-box">
-                        <h2>IISER Berhampur (2019-2024)</h2>
-                        <p>BS-MS</p>
-                    </div>
-                </div>
-
-                <div class="education-item right">
-                    <div class="content-box">
-                        <h2>SSVM Neelkanth Nagar (2016-2018)</h2>
-                        <p>12th</p>
-                    </div>
-                </div>
-
-                <div class="education-item left">
-                    <div class="content-box">
-                        <h2>SSVM Khurda (2007-2016)</h2>
-                        <p>10th</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
+    </section>
 
     <script>
         const greetings = ["||ନମସ୍କାର||", "||नमस्कार||", "||Greetings||", "||namaskāra||", "||こんにちは||"];
         let index = 0;
-
         const greetingText = document.getElementById("greetingText");
-
+        
         function updateGreeting() {
-            greetingText.textContent = greetings[index];
-            index = (index + 1) % greetings.length;
+            anime({
+                targets: greetingText,
+                opacity: [1, 0],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+                complete: function() {
+                    greetingText.textContent = greetings[index];
+                    index = (index + 1) % greetings.length;
+                    anime({
+                        targets: greetingText,
+                        opacity: [0, 1],
+                        duration: 1000,
+                        easing: 'easeInOutQuad'
+                    });
+                }
+            });
         }
+        
+        setInterval(updateGreeting, 4000);
 
-        // Change the greeting every 4 seconds
-        setInterval(updateGreeting, 4000); 
+        // Hero section animations
+        anime({
+            targets: '.hero .profile-picture',
+            opacity: [0, 1],
+            scale: [0.8, 1],
+            delay: 300,
+            duration: 1000,
+            easing: 'easeOutQuad'
+        });
+
+        anime({
+            targets: ['.hero h1', '.hero p', '.hero .cta-button', '.hero .greeting-text'],
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(200, {start: 500}),
+            duration: 800,
+            easing: 'easeOutQuad'
+        });
+
+        // Timeline animations
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: entry.target,
+                        opacity: [0, 1],
+                        translateX: entry.target.classList.contains('left') ? ['-20px', '0'] : ['20px', '0'],
+                        duration: 800,
+                        easing: 'easeOutQuad'
+                    });
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
